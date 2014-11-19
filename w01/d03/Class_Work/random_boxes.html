@@ -1,0 +1,27 @@
+<html>
+<body>
+  <canvas id="the_canvas" width="400" height="400" style="border:1px solid #000000;">></canvas>
+  <input type="button" value="Refresh Page" onClick="window.location.reload()">
+  <script>
+    var canvas = document.getElementById('the_canvas');
+    var ctx = canvas.getContext('2d');
+    var input = window.prompt("How many boxes please?");
+    var rand = Math.floor(400*Math.random());
+
+    //alert(typeof input);
+    var num = parseInt(input);
+   // var input = parseInt(input);
+
+	counter = 0;
+	while(counter < num) {
+        var r = Math.floor(400*Math.random());
+        var g = Math.floor(400*Math.random());
+        var b = Math.floor(400*Math.random());
+        ctx.fillStyle = "rgb(" + r + ", " + g + "," + b + ")";
+        ctx.fillRect ((Math.floor(400*Math.random())), (Math.floor(400*Math.random())), 25, 25);
+        counter++;
+	}    
+
+  </script>
+</body>
+</html>
